@@ -1,0 +1,35 @@
+.item {
+  width: 180px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  border: 1px solid rgba(0, 0, 0, 0.205);
+  padding: 5px 10px;
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.233);
+  transition: box-shadow 250ms linear;
+}
+.item:hover {
+  box-shadow: 0px 1px 7px 3px rgba(0, 0, 0, 0.233);
+}
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.online {
+  background-color: green;
+  display: block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+.offline {
+  composes: online;
+  background-color: red;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.name {
+}
