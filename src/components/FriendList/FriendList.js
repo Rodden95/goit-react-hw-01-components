@@ -3,8 +3,8 @@ import FriendListItem from 'components/FriendListItem/FriendListItem'
 import s from 'components/FriendList/FriendList.module.css'
 import PropTypes from 'prop-types'
 function FriendList({ friends }) {
-  console.log(friends);
-  return <ul className={s.friendList} key={friends}>
+  
+  return <ul className={s.friendList}>
     
    
    {
@@ -15,12 +15,13 @@ function FriendList({ friends }) {
           name={name}
           isOnline={isOnline}
           keyId={id}
+          key={id}
         />
       })
     }
          </ul>
 }
 PropTypes.FriendList = {
-  friends: PropTypes.object,
+  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 export default FriendList;

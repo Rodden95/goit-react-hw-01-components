@@ -2,6 +2,7 @@ import s from 'components/TransactionHistory/TransactionHistory.module.css'
 import PropTypes from 'prop-types'
 
 function TransactionHistory({transactions}) {
+  
   return <table className={s.transaction__history}>
   <thead>
     <tr className={s.hrow}>
@@ -23,6 +24,6 @@ function TransactionHistory({transactions}) {
 </table>
 }
 PropTypes.TransactionHistory = {
-  transactions:PropTypes.node,
+  transactions:PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 export default TransactionHistory;
